@@ -74,6 +74,9 @@ def demo(opt):
     # predict
     model.eval()
     with torch.no_grad():
+
+        all_predictions = []
+        
         for image_tensors, image_path_list in demo_loader:
 
             #print('DEMO LOADER: ', image_path_list)
@@ -113,7 +116,7 @@ def demo(opt):
 
             #print(preds_prob)
 
-            all_predictions = []
+            #all_predictions = []
 
             for img_name, pred, pred_max_prob in zip(image_path_list, preds_str, preds_max_prob):
                 if 'Attn' in opt.Prediction:
