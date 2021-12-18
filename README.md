@@ -1,1 +1,1 @@
-# aicpred
+# aicocr
